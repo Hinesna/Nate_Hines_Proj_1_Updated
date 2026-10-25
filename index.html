@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>D&D Monster Browser</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Jim+Nightshade&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Dungeon Master's Friend</h1>
+  <p>Search the bestiary by name and monster stats.</p>
+
+  <form id="searchForm">
+    
+
+    <label>
+      Monster type
+      <select id="type">
+        <option value="">Any type</option>
+        <option value="aberration">Aberration</option>
+        <option value="beast">Beast</option>
+        <option value="celestial">Celestial</option>
+        <option value="construct">Construct</option>
+        <option value="dragon">Dragon</option>
+        <option value="elemental">Elemental</option>
+        <option value="fey">Fey</option>
+        <option value="fiend">Fiend</option>
+        <option value="giant">Giant</option>
+        <option value="humanoid">Humanoid</option>
+        <option value="monstrosity">Monstrosity</option>
+        <option value="ooze">Ooze</option>
+        <option value="plant">Plant</option>
+        <option value="undead">Undead</option>
+      </select>
+    </label>
+
+    <label>
+      Size
+      <select id="size">
+        <option value="">Any size</option>
+        <option value="Tiny">Tiny</option>
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+        <option value="Huge">Huge</option>
+        <option value="Gargantuan">Gargantuan</option>
+      </select>
+    </label>
+
+    <label>
+Alignment
+  <select id="alignment">
+    <option value="">Any alignment</option>
+    <option>lawful good</option>
+    <option>neutral good</option>
+    <option>chaotic good</option>
+    <option>lawful neutral</option>
+    <option>neutral</option>
+    <option>chaotic neutral</option>
+    <option>lawful evil</option>
+    <option>neutral evil</option>
+    <option>chaotic evil</option>
+    <option>unaligned</option>
+  </select>
+</label>
+
+    <label>
+      Maximum challenge rating
+      <input id="maxCR" type="number" min="0" max="30"
+             step="0.125" placeholder="e.g. 5">
+    </label>
+
+    <label class="wide">
+      <p>Monster name <em>(optional)</em></p>
+      <input id="name" type="text"
+             placeholder="e.g. dragon">
+    </label>
+
+    <button type="submit">Find <em>YOUR</em> Monster</button>
+  </form>
+
+  <p id="status">Press Search Monsters to begin.</p>
+
+  <nav id="pager">
+  <button id="prev" class="hidden" type="button">Previous Page</button>
+  <button id="next" class="hidden" type="button">Next Page</button>
+</nav>
+
+  <section id="results"></section>
+  
+
+  <script src="scripts.js" async defer></script>
+
+</body>
+</html>
