@@ -4,7 +4,7 @@ body {
   margin: 40px auto;
   padding: 20px;
   background-image: url('images/vintage\ paper.jpg');
-  color: #29251f;
+  color: #000000;
 }
 
 h1 { 
@@ -13,6 +13,13 @@ h1 {
   font-weight: 400;
   font-size: 80px;
   font-style: normal;
+}
+
+h2 {
+  
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 form {
@@ -47,7 +54,7 @@ button {
 cursor: pointer;
 font-family: "Jim Nightshade", cursive;
 font-size: 20px;
-background: #43372c;
+background: #c60000;
 color: white;
 }
 
@@ -91,7 +98,10 @@ form button {
   }
 
   .details { 
-    font-size: 14px; 
+    font-size: 16px; 
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
   }
 
   .details p { 
@@ -106,6 +116,8 @@ form button {
   justify-self: center;
   justify-content: center;
   text-decoration: double;
+  margin-bottom: 10px;
+
 }
 
 #status {

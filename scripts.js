@@ -131,9 +131,11 @@ async function loadMonsters() {
         const detailsCR = document.createElement("p");
         detailsCR.className = "details hidden";
 
+        document.createElement("br");
+
         //add a link to D&D beyond to allow user to find more external details
         const detailsLink = document.createElement("a");
-        detailsLink.className = "details detaillink hidden";
+        detailsLink.className = "detaillink hidden";
         detailsLink.href = `https://www.dndbeyond.com/search?q=${encodeURIComponent(monster.name)}`;
         detailsLink.target = "_blank";
         detailsLink.rel = "noopener noreferrer";
@@ -147,8 +149,10 @@ async function loadMonsters() {
             img.loading = "lazy";
             img.className = "monster-img";
             img.addEventListener("error", () => img.remove()); // hide broken images
-}
-        //tie the gathered data for each monster to a <p> section.
+          }
+
+
+        //tie the gathered data for each monster to a type section.
         detailsType.textContent =
           `Type: ${monster.type}`;
 
@@ -173,9 +177,12 @@ async function loadMonsters() {
           detailsAlign.classList.toggle("hidden");
           detailsCR.classList.toggle("hidden");
           detailsLink.classList.toggle("hidden");
-          toggle.textContent = details.classList.contains("hidden")
-            ? "View Stats" : "Hide Stats";
-        });
+          
+          toggle.textContent = detailsType.classList.contains("hidden")
+    ? "View stats"
+    : "Hide stats";
+          }
+        );
 
         card.append(
           img, title, detailsType, detailsSize, detailsAlign, detailsCR, detailsLink, toggle);
